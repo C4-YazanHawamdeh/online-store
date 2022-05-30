@@ -17,25 +17,24 @@ const Login = () => {
       token: state.loginReducer.token,
     };
   });
-  const [userName1, setUserName1] = useState("");
-  const onSuccess = (response) => {
-    dispatch(login(response.tokenId));
-    localStorage.setItem("userToken", response.tokenId);
-    setUserName1(response.profileObj.name);
+  // const [userName1, setUserName1] = useState("");
+  // const onSuccess = (response) => {
+  //   dispatch(login(response.tokenId));
+  //   localStorage.setItem("userToken", response.tokenId);
+  //   setUserName1(response.profileObj.name);
 
-    setEmailGoogle(response.profileObj.email);
-    localStorage.setItem("userName", response.profileObj.name);
-    navigate("/home");
+  //   setEmailGoogle(response.profileObj.email);
+  //   localStorage.setItem("userName", response.profileObj.name);
+  //   navigate("/home");
 
-    addNewUserWithGoogle(response.profileObj.name, response.profileObj.email);
-  };
-  const onFailure = (response) => {
-    console.log(response);
-  };
+  //   addNewUserWithGoogle(response.profileObj.name, response.profileObj.email);
+  // };
+  // const onFailure = (response) => {
+  //   console.log(response);
+  // };
 
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
-  const [emailGoogle, setEmailGoogle] = useState("");
   const [password, setPassword] = useState("");
 
   const [message, setmessage] = useState("");
@@ -73,26 +72,7 @@ const Login = () => {
     //================================================================
   };
 
-  const addNewUserWithGoogle = async (username, email) => {
-    try {
-      const result = await axios.post("/users", {
-        userName: username,
-        email: email,
-        password: "123",
-        role_id: "1",
-      });
-      if (result.data.success) {
-        navigate("/home");
-        body.email = email;
-        body.password = "123";
-        loginUser();
-      }
-    } catch (error) {
-      body.email = email;
-      body.password = "123";
-      loginUser();
-    }
-  };
+  
   return (
     <div className="main-continar">
       <div className="login-continar">
@@ -134,9 +114,9 @@ const Login = () => {
               </button>
             </div>
             <br />
-            <div className="orSection">
-              <hr />
-              <button>OR</button>
+            {/* <div className="orSection">
+              <hr /> */}
+              {/* <button>OR</button>
             </div>
             <GoogleLogin
               className="googleButton"
@@ -145,7 +125,7 @@ const Login = () => {
               onSuccess={onSuccess}
               onFailure={onFailure}
               cookiePolicy={"single_host_origin"}
-            />
+            /> */}
           </div>
         </div>
         <div className="message"> </div>
