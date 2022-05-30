@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#registerR {
+  color: #ff4136;
+}
+#loginR {
+  color: #000;
+  transition: all 0.4s ease 0s;
+}
+#loginR:hover {
+  color: #ff4136;
+}

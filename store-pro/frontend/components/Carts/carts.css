@@ -1,0 +1,103 @@
+.quantity {
+  float: right;
+  padding-left: 50px;
+  text-align: start;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.addToCarts {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  text-align: center;
+  grid-template-columns: auto auto auto auto auto ;
+  background-color: #e5e5e5;
+  margin-top: 20px;
+  padding: 20px;
+  margin: 2rem 4rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 15%);
+}
+.addToCarts img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+}
+.quantity-container {
+  text-align: center;
+}
+.quantity-container input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.product-price-container h2 {
+  padding-top: 1rem;
+}
+.total-container h2 {
+  padding-top: 1rem;
+  color: #17a2b8;
+}
+.remove {
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.8rem 3rem;
+  font-size: 14px;
+  border: none;
+}
+.remove:hover {
+  background-color: #dc2436;
+  cursor: pointer;
+}
+
+.totalDiv {
+  padding: 25px 0px;
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 6rem;
+}
+.paymentBtn {
+  padding: 0.8rem 3rem;
+  background-color: #28a745;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.emptyContainer {
+  padding: 5rem 0;
+  margin: 0.7%;
+}
+.emptyContainer h2 {
+  padding: 1rem 0;
+}
+.emptyContainer .continueShopping {
+  padding: 0.8rem 3rem;
+  background-color: #17a2b8;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.emptyContainer .continueShopping:hover {
+  background-color: #077182;
+}
+.totalMoney{
+  margin-right: 17px;
+}
+.cartPage{
+  background-color:whitesmoke;
+}
