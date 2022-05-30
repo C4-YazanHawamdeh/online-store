@@ -6,7 +6,7 @@ import "./Login.css";
 import GoogleLogin from "react-google-login";
 
 //redax
-import { login } from "../../reducer/login/index";
+import { login } from "../../../frontend/reducer/login/index";
 import { useDispatch, useSelector } from "react-redux";
 //********************** */
 
