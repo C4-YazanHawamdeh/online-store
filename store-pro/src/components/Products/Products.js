@@ -173,7 +173,7 @@ const Products = () => {
                   <div className="product-image">
                     <img src={product.image} alt="" />
 
-                    <div className="info">
+                    {/* <div className="info">
                       <h2> Detailes</h2>
                       <ul>
                         <li>
@@ -189,7 +189,7 @@ const Products = () => {
                           {"$"+product.price}
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
