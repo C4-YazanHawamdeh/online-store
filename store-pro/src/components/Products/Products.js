@@ -7,8 +7,6 @@ import {
 } from "../../reducer/products";
 import {   useParams } from "react-router-dom";
 import "./Products.css";
-import Comment from "./Comment";
-import Rating from "./Rating";
 import Swal from "sweetalert2";
 import { BsHeart } from "react-icons/bs";
 import { addcart } from "../../reducer/cart/carts";
@@ -143,7 +141,6 @@ const Products = () => {
                     </span>
                     <br />
                     <span className="hint-star star">
-                      <Rating />
                     </span>
 
                     <p className="information">{product.description}</p>
@@ -202,7 +199,6 @@ const Products = () => {
         </div>
         <div className="paddBIgDiv">
           {" "}
-          <Comment id={id} />
         </div>
       </div>
     </div>

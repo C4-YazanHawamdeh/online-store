@@ -3,24 +3,24 @@ import { Link, useNavigate } from "react-router-dom";
 import { addproduct } from "../../reducer/products";
 import axios from "axios";
 import "./NewProduct.css";
-import UploadFile from "./UploadFile";
+// import UploadFile from "./UploadFile";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { logout } from "../../reducer/login/index";
 
-import {
-  ComposedChart,
-  Line,
-  Area,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  Scatter,
-  ResponsiveContainer,
-} from "recharts";
+// import {
+//   ComposedChart,
+//   Line,
+//   Area,
+//   Bar,
+//   XAxis,
+//   YAxis,
+//   CartesianGrid,
+//   Tooltip,
+//   Legend,
+//   Scatter,
+//   ResponsiveContainer,
+// } from "recharts";
 const NewProduct = () => {
   const dispatch = useDispatch();
   const history = useNavigate();
@@ -304,7 +304,7 @@ const NewProduct = () => {
               required=""
               style={{ textTransform: "capitalize" }}
             />
-            <UploadFile setImage={setImage} />
+            {/* <UploadFile setImage={setImage} /> */}
 
             <div className="button-signIn">
               {" "}
@@ -324,7 +324,7 @@ const NewProduct = () => {
                 </div>
               </div>
             </div>
-            <div className="second">
+            {/* <div className="second">
               <ResponsiveContainer width="100%" height="100%">
                 <ComposedChart
                   width={500}
@@ -353,7 +353,7 @@ const NewProduct = () => {
                   <Scatter dataKey="cnt" fill="red" />
                 </ComposedChart>
               </ResponsiveContainer>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

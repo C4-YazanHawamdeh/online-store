@@ -7,6 +7,8 @@ import Login from "./components/Login/Login";
 import NewProduct from "./components/NewProduct/NewProduct";
 import Carts from "./components/Carts/carts";
 import Products from "./components/Products/Products";
+import Navigation from "./components/Navigation/Navigation";
+
 
 function App() {
   const role = localStorage.getItem("myRole");
@@ -15,6 +17,8 @@ function App() {
     <div className="App">
       
       <h1>yazan</h1>
+      <Navigation setProductName={setProductName} />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />

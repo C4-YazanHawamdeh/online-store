@@ -26,29 +26,73 @@ const Register = () => {
 
   // =================================================================
 
+  // const addNewUser = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const result = await axios.post("http://localhost:3000/users", {
+  //       userName,
+  //       email,
+  //       password,
+  //       role_id,
+  //     });
+  //     if (result.data.success) {
+  //       setStatus(true);
+  //       setMessage("The user has been created successfully");
+  //       navigate("/login");
+  //     } else throw Error;
+  //   } catch (error) {
+  //     setStatus(false);
+  //     if (error.response && error.response.data) {
+  //       return setMessage(error.response.data.massage);
+  //     }
+  //     setMessage("Error happened while register, please try again");
+  //   }
+  // };
+
   const addNewUser = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("/users", {
+      const result = await axios.post("http://localhost:3000/users", {
         userName,
         email,
         password,
         role_id,
       });
       if (result.data.success) {
-        setStatus(true);
         setMessage("The user has been created successfully");
-        navigate("/login");
+        navigate("/home");
+        console.log('created success');
+        // setShowSignup(false);
+        // setShowLogin(true);
+
       } else throw Error;
     } catch (error) {
-      setStatus(false);
       if (error.response && error.response.data) {
+        console.log(error, "jjjjjjj",error.response);
         return setMessage(error.response.data.massage);
       }
       setMessage("Error happened while register, please try again");
     }
   };
 
+
+  // const addNewUser=async()=>{
+  //   await axios.post("http://localhost:3000/users", {
+  //           userName,
+  //           email,
+  //           password,
+  //           role_id,
+  //         }).then((result)=>{
+  //           setMessage("The user has been created successfully");
+  //           navigate("/home");
+  //           console.log('created success');
+  //         }
+           
+  //         ).catch((err)=>{
+  //           // throw err;
+  //           console.log(err);
+  //         })
+  // }
   // =================================================================
 
   return (

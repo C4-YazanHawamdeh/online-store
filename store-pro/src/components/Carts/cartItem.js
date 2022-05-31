@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import { deleteCartstById, updateCarttById } from "../../../frontend/reducer/cart/carts";
+import { deleteCartstById, updateCarttById } from "../../reducer/cart/carts";
 import Swal from "sweetalert2";
 const CartItem = ({ product, getMyCart }) => {
   const state = useSelector((state) => {
