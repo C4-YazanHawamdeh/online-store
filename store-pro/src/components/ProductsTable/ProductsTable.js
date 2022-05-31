@@ -343,8 +343,6 @@ const ProductsTable = () => {
               <tr className="tr">
                 <th>Id</th>
                 <th>Name</th>
-                <th>Brand</th>
-                <th>Type</th>
                 <th>Price</th>
                 <th>Actions</th>
               </tr>

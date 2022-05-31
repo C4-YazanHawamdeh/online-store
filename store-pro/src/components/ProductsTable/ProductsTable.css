@@ -3,10 +3,10 @@
 
   font-family: sans-serif;
   display: grid;
-
+/* 
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 100px 175px 300px 550px;
-  grid-template-areas: "side name name name name name name name" "side   box box box box box box box" " side chart chart chart chart chart chart chart" " side table table table table table table table";
+  grid-template-areas: "side name name name name name name name" "side   box box box box box box box" " side chart chart chart chart chart chart chart" " side table table table table table table table"; */
 }
 
 
