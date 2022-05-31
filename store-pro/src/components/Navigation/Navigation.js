@@ -42,7 +42,7 @@ const Navigation = ({ setProductName }) => {
                    Home
                   </Link>
                 </div>
-                <div className="search-continar">
+                {/* <div className="search-continar">
                   <input
                     type="text"
                     placeholder="Search"
@@ -54,7 +54,7 @@ const Navigation = ({ setProductName }) => {
                   <Link className="searchIcon" to="/search">
                     <BsSearch />
                   </Link>
-                </div>
+                </div> */}
                 <div className="icons">
                   {state.carts.length ? (
                     <div>
@@ -100,13 +100,7 @@ const Navigation = ({ setProductName }) => {
                 <div>
                 <div className="logoCrypto1">
                   <Link to="/home">
-                    <img
-                      id="design-logo"
-                      className="logoWithoutLogin"
-                      src="https://res.cloudinary.com/cryptoteam/image/upload/v1644916542/s6s5uvrbwcb3nbisvoiw.svg
-"
-                      alt="home"
-                    />
+                   Home
                   </Link>
                 </div>
                 <div className="endNav">

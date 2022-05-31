@@ -55,8 +55,6 @@ const NewProduct = () => {
     const product = {
       name,
       image,
-      brand,
-      type,
       description,
       price,
     };
@@ -67,7 +65,6 @@ const NewProduct = () => {
           setStatus(true);
           dispatch(addproduct(product));
           getProductsNoLimit();
-          categories();
           
 
           Swal.fire({
@@ -84,80 +81,79 @@ const NewProduct = () => {
       });
   };
 
-  //====================================
-  const getLaptosp = () => {
-    axios
+  // //====================================
+  // const getLaptosp = () => {
+  //   axios
 
-      .get(`/products/type/laptop`)
-      .then((result) => {
-        setLaptops(result.data.products);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
+  //     .get(`/products/type/laptop`)
+  //     .then((result) => {
+  //       setLaptops(result.data.products);
+  //     })
+  //     .catch((err) => {
+  //       throw err;
+  //     });
+  // };
 
-  //=======================================
-  const getTVs = () => {
-    axios
+  // //=======================================
+  // const getTVs = () => {
+  //   axios
 
-      .get(`/products/type/TV`)
-      .then((result) => {
-        setTVs(result.data.products);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
-  //==================================================
-  const getMobiles = () => {
-    axios
+  //     .get(`/products/type/TV`)
+  //     .then((result) => {
+  //       setTVs(result.data.products);
+  //     })
+  //     .catch((err) => {
+  //       throw err;
+  //     });
+  // };
+  // //==================================================
+  // const getMobiles = () => {
+  //   axios
 
-      .get(`/products/type/mobile`)
-      .then((result) => {
-        setMobiles(result.data.products);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
-  //========================================================
-  const getWathces = () => {
-    axios
+  //     .get(`/products/type/mobile`)
+  //     .then((result) => {
+  //       setMobiles(result.data.products);
+  //     })
+  //     .catch((err) => {
+  //       throw err;
+  //     });
+  // };
+  // //========================================================
+  // const getWathces = () => {
+  //   axios
 
-      .get(`/products/type/watch`)
-      .then((result) => {
-        setWatches(result.data.products);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
-  //========================================================
-  const getcamera = () => {
-    axios
+  //     .get(`/products/type/watch`)
+  //     .then((result) => {
+  //       setWatches(result.data.products);
+  //     })
+  //     .catch((err) => {
+  //       throw err;
+  //     });
+  // };
+  // //========================================================
+  // const getcamera = () => {
+  //   axios
 
-      .get(`/products/type/camera`)
-      .then((result) => {
-        setcamera(result.data.products);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
+  //     .get(`/products/type/camera`)
+  //     .then((result) => {
+  //       setcamera(result.data.products);
+  //     })
+  //     .catch((err) => {
+  //       throw err;
+  //     });
+  // };
 
-  //=============================
-  const categories = () => {
-    getLaptosp();
-    getTVs();
-    getMobiles();
-    getWathces();
-    getcamera();
-  };
+  // //=============================
+  // const categories = () => {
+  //   getLaptosp();
+  //   getTVs();
+  //   getMobiles();
+  //   getWathces();
+  //   getcamera();
+  // };
   //=========================
   useEffect(() => {
     getProductsNoLimit();
-    categories()
   }, []);
 
   //====================================================
@@ -267,24 +263,7 @@ const NewProduct = () => {
               style={{ textTransform: "capitalize" }}
             />
 
-            <input
-              type="text"
-              onChange={(e) => {
-                setBrand(e.target.value);
-              }}
-              placeholder=" Brand"
-              required=""
-              style={{ textTransform: "capitalize" }}
-            />
-            <input
-              type="text"
-              onChange={(e) => {
-                setType(e.target.value);
-              }}
-              placeholder=" Type"
-              required=""
-              style={{ textTransform: "capitalize" }}
-            />
+         
             <input
               type="number"
               onChange={(e) => {
