@@ -17,6 +17,7 @@ const loginRouter = require("./routes/login");
 const usersRouter = require("./routes/users");
 
 const productsRouter = require("./routes/products");
+const cartsRouter = require("./routes/carts");
 
 
 
@@ -27,6 +28,7 @@ app.use("/users", usersRouter);
 
 app.use("/products", productsRouter);
 
+app.use("/carts", cartsRouter);
 
 const PORT = process.env.PORT || 3000;
 
