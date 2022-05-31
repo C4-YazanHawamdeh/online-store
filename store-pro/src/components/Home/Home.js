@@ -40,7 +40,7 @@ const Home = () => {
 
   const getAllProducts = async () => {
     await axios
-      .get(`/products`)
+      .get(`http://localhost:3000/products`)
       .then((res) => {
         dispatch(setproducts(res.data.result));
 
@@ -84,7 +84,7 @@ const Home = () => {
 
   useEffect(() => {
     getAllProducts();
-  }, [skip]);
+  }, []);
 
   const inc = () => {
     setSkip(skip + 8);
@@ -283,28 +283,7 @@ const Home = () => {
         )}
       </div>
 
-      <div>
-        <div className="aboutUs">
-          <div className="float">
-            <img
-              className="imgAbout"
-              src="https://images.pexels.com/photos/3563627/pexels-photo-3563627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-              "
-             alt=""/>
-            <div className="pImg ">
-              <div className="pad">
-                <h1 className="lineAbout">About us</h1>
-                <br />
-
-                <p>
-                  {" "}
-                  This is an online market for buying electronic devices. There are a lot of categories such as, laptops and watches..etc. Get started and signup with us now to view more detailes about our website.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };

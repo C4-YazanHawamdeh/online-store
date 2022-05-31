@@ -68,7 +68,7 @@ const Register = () => {
       } else throw Error;
     } catch (error) {
       if (error.response && error.response.data) {
-        console.log(error, "jjjjjjj",error.response);
+        // console.log(error, "jjjjjjj",error.response);
         return setMessage(error.response.data.massage);
       }
       setMessage("Error happened while register, please try again");
