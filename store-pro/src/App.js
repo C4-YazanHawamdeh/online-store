@@ -8,6 +8,7 @@ import NewProduct from "./components/NewProduct/NewProduct";
 import Carts from "./components/Carts/carts";
 import Products from "./components/Products/Products";
 import Navigation from "./components/Navigation/Navigation";
+import ProductsTable from "./components/ProductsTable/ProductsTable";
 
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
           path="/newProduct"
           element={
             role == 2 ? (
+              <>
               <NewProduct />
+              {/* <ProductsTable /> */}
+              </>
             ) : (
               <>
                 <img
@@ -41,7 +45,22 @@ function App() {
         />
         <Route path="/carts" element={<Carts />} />
         <Route path="/products/:id" element={<Products />} />
-      
+        <Route
+          path="/productsTable"
+          element={
+            role == 2 ? (
+              <ProductsTable />
+            ) : (
+              <>
+                <img
+                  style={{ height: "40rem", width: "90rem" }}
+                  src="https://res.cloudinary.com/cryptoteam/image/upload/v1644924821/fn6rmgiqzmtkfeawgmco.svg"
+                  alt="401 Unauthorized"
+                />
+              </>
+            )
+          }
+        />
        
         <Route
          path='*' exact={true}

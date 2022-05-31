@@ -58,7 +58,7 @@ const Login = () => {
         localStorage.setItem("myRole", result.data.role);
         localStorage.setItem("myUserId", result.data.userId);
         if (result.data.role === 2) {
-          navigate("/ProductsTable");
+          navigate("/NewProduct");
         } else {
           navigate("/home");
         }

@@ -283,6 +283,15 @@ const NewProduct = () => {
               required=""
               style={{ textTransform: "capitalize" }}
             />
+             <input
+              type="text"
+              onChange={(e) => {
+                setImage(e.target.value);
+              }}
+              placeholder=" image"
+              required=""
+              style={{ textTransform: "capitalize" }}
+            />
             {/* <UploadFile setImage={setImage} /> */}
 
             <div className="button-signIn">
