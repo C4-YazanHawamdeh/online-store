@@ -39,12 +39,7 @@ const Navigation = ({ setProductName }) => {
               <div className= "navigation">
                 <div className="logoCrypto">
                   <Link to="/home">
-                    <img
-                      id="design-logo"
-                      src="https://res.cloudinary.com/cryptoteam/image/upload/v1644916542/s6s5uvrbwcb3nbisvoiw.svg
-"
-                      alt="home"
-                    />
+                   Home
                   </Link>
                 </div>
                 <div className="search-continar">

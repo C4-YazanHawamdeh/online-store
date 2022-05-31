@@ -40,14 +40,15 @@ const Home = () => {
 
   const getAllProducts = async () => {
     await axios
-      .get(`/products/page?skip=${skip}&limit=8`)
+      .get(`/products`)
       .then((res) => {
         dispatch(setproducts(res.data.result));
 
         setShow(true);
       })
       .catch((err) => {
-        throw err;
+        console.log(err);
+        // throw err;
       });
   };
 
@@ -64,20 +65,20 @@ const Home = () => {
     });
   };
   //=====================================================
-  const addToWishList = async (id) => {
-    const headers = {
-      Authorization: `Bearer ${state.token}`,
-    };
+  // const addToWishList = async (id) => {
+  //   const headers = {
+  //     Authorization: `Bearer ${state.token}`,
+  //   };
 
-    await axios
-      .post(`/wishList/${id}`, {}, { headers })
-      .then((res) => {
+  //   await axios
+  //     .post(`/wishList/${id}`, {}, { headers })
+  //     .then((res) => {
         
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -104,7 +105,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="header">
+      {/* <div className="header">
         <img
           className="headerImg"
           src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -120,9 +121,9 @@ const Home = () => {
           <br/>
           <button className="joinus" onClick={()=>{navigate("/register")}}>Join us</button>
         </div>
-      </div>
+      </div> */}
 
-      <div className="sliderSection">
+      {/* <div className="sliderSection">
         <div className="container1">
           <div className="slides-wrapper">
             <div className="img-container">
@@ -149,57 +150,11 @@ const Home = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
       <div className="section2">
         <span id="hidden"></span>
-        <div className="type-home">
-          <span
-            className="linkSize"
-            onClick={() => {
-              navigate(`/type/Laptop`);
-              window.scrollTo(0, 300);
-            }}
-          >
-            LAPTOP
-          </span>
-          <span
-            className="linkSize"
-            onClick={() => {
-              navigate(`/type/TV`);
-              window.scrollTo(0, 300);
-            }}
-          >
-            TV
-          </span>
-          <span
-            className="linkSize"
-            onClick={() => {
-              navigate(`/type/Mobile`);
-              window.scrollTo(0, 300);
-            }}
-          >
-            MOBILE
-          </span>
-          <span
-            className="linkSize"
-            onClick={() => {
-              navigate(`/type/Watch`);
-              window.scrollTo(0, 300);
-            }}
-          >
-            WATCH
-          </span>
-          <span
-            className="linkSize"
-            onClick={() => {
-              navigate(`/type/Camera`);
-              window.scrollTo(0, 300);
-            }}
-          >
-            CAMERA
-          </span>
-        </div>
+       
 
         {/* /////////////////////////////////////////////////////////////////////////////////////// */}
 
@@ -222,7 +177,7 @@ const Home = () => {
                               }}
                               alt=""
                             />
-                            <div className="img-info">
+                            {/* <div className="img-info">
                               <div className="info-inner">
                                 <span
                                   className="add "
@@ -262,7 +217,7 @@ const Home = () => {
                                   )}
                                 </span>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
 
                           <div className="box-down">

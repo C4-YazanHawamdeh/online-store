@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="App">
       
-      <h1>yazan</h1>
       <Navigation setProductName={setProductName} />
 
       <Routes>
