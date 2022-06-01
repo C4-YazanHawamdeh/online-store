@@ -40,3 +40,20 @@ quantity INT(4),
 is_deleted TINYINT DEFAULT 0,
 PRIMARY KEY (id)
 );
+
+
+
+INSERT INTO roles (role) VALUES("user");
+INSERT INTO roles (role) VALUES("admin");
+
+INSERT INTO users (userName,email,password,role_id) VALUES("yazan","ha@gmail","123",1);
+INSERT INTO users (userName,email,password,role_id) VALUES("ahmad","ah@gmail","123",2);
+
+
+
+
+
+INSERT INTO products (name,image,description,price) VALUES("Crowne Plaza","https://hyra.cron24.com/images/rooms/10009/room_11606550275.jpg","This wonderful, barn-like cottage is renovated to a modern country style and is truly your cosy 'home from home.","15");
+INSERT INTO products (name,image,description,price) VALUES("Crowne Plaza","https://hyra.cron24.com/images/rooms/10009/room_11606550275.jpg","This wonderful, barn-like cottage is renovated to a modern country style and is truly your cosy 'home from home.","15");
+INSERT INTO products (name,image,description,price) VALUES("Crowne Plaza","https://hyra.cron24.com/images/rooms/10009/room_11606550275.jpg","This wonderful, barn-like cottage is renovated to a modern country style and is truly your cosy 'home from home.","15");
+
